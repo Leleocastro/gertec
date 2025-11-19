@@ -86,8 +86,9 @@ public class GertecPrinterPlugin implements FlutterPlugin, MethodCallHandler {
                 int widthQR = call.argument("width");
                 int heightQR = call.argument("height");
                 String textQrcode = call.argument("text");
+                int alignQR = call.argument("align");
                 try {
-                    printer.printQRcode(textQrcode, widthQR, heightQR);
+                    printer.printQRcode(textQrcode, widthQR, heightQR, alignQR);
                     result.success(new ReturnObject("OK", 1, true).toJson());
                 } catch (RemoteException e) {
                     result.success(new ReturnObject(e.getMessage(), "", false).toJson());

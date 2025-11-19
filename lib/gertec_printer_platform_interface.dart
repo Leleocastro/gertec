@@ -56,7 +56,8 @@ abstract class GertecPrinterPlatform extends PlatformInterface {
   }
 
   Future<String?> printQrcode(
-      {required int width, required int height, required String text}) {
+      {required int width, required int height, required String text,
+      required int align}) {
     throw UnimplementedError('printQrcode() has not been implemented.');
   }
 

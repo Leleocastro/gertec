@@ -51,7 +51,8 @@ class MethodChannelGertecPrinter extends GertecPrinterPlatform {
 
   @override
   Future<String?> printQrcode(
-      {required int width, required int height, required String text}) async {
+      {required int width, required int height, required String text,
+      required int align }) async {
     return await methodChannel.invokeMethod(
         'PRINT_QRCODE', {"width": width, 'height': height, 'text': text});
   }

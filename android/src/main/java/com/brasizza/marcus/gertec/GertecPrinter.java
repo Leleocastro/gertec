@@ -64,8 +64,8 @@ public class GertecPrinter extends Application {
         return 1;
     }
 
-    public void printQRcode(String textQrcode, int widthQR, int heightQR) throws RemoteException {
-        printer.addRuiQRCode(textQrcode, widthQR, heightQR);
+    public void printQRcode(String textQrcode, int widthQR, int heightQR, int alignQR) throws RemoteException {
+        printer.addRuiQRCode(textQrcode, widthQR, heightQR, alignQR);
         if (!inTransaction) {
             printer.printRuiQueue(mListen);
         }

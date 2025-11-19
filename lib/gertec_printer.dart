@@ -61,9 +61,10 @@ class GertecPrinter {
   }
 
   Future<GertecResponse> printQrcode(
-      {int width = 100, int height = 100, required String text}) async {
+      {int width = 100, int height = 100, required String text,
+      PrintAlign align = PrintAlign.LEFT}) async {
     return GertecResponse.fromJson(await GertecPrinterPlatform.instance
-            .printQrcode(width: width, height: height, text: text) ??
+            .printQrcode(width: width, height: height, text: text, align: align.value) ??
         '{}');
   }
 
